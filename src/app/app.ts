@@ -5,7 +5,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NgIf],
-  templateUrl: './app-dashboard.html',
+  templateUrl: '/modulos/dashboard.html',
   styleUrl: './app.css'
 })
 export class App {
