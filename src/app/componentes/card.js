@@ -5,6 +5,10 @@ class AppCard extends HTMLElement {
     this.attachShadow({ mode: 'open' });
   }
 
+
+
+
+  
   async connectedCallback() {
     const width = this.getAttribute('width') || '120px';
     const height = this.getAttribute('height') || '80px';
