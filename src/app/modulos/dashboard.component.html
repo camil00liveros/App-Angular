@@ -1,48 +1,3 @@
-<style>
-  :host {
-    --bg: #f6f7fb;
-    --primary: #5b21b6;
-    --muted: #6b7280;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
-  }
-  * { box-sizing: inherit; }
-  nav.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background: white;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    gap: 1rem;
-  }
-  .brand h1 { margin: 0; font-size: 1.125rem; color: var(--primary); }
-  .nav-buttons { display: flex; gap: 0.5rem; }
-  .nav-button {
-    background: transparent;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    cursor: pointer;
-    color: #111827;
-    font-weight: 600;
-  }
-  .nav-button.active {
-    background: color-mix(in srgb, var(--primary) 12%, transparent);
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
-    color: var(--primary);
-  }
-  .dashboard {
-    background: var(--bg);
-    min-height: calc(100vh - 68px);
-    padding: 2rem 1.5rem;
-  }
-  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-  .card { background: white; border-radius: 10px; padding: 1rem; box-shadow: 0 6px 18px rgba(12,15,20,0.04); }
-  .card h2 { margin: 0 0 0.5rem 0; }
-  @media (max-width:600px){ nav.navbar{flex-direction:column;align-items:stretch;} .nav-buttons{justify-content:space-around;width:100%;} }
-</style>
-
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="brand">
     <h1>Mi Dashboard</h1>
@@ -57,50 +12,44 @@
 
 <main class="dashboard">
   <div class="grid">
-    <!-- INICIO: 2 cards -->
-    <section *ngIf="active() === 'inicio'" class="card">
+    <app-card *ngIf="active() === 'inicio'">
       <h2>📊 Panel de Control</h2>
       <p>Bienvenido al panel de control. Desde aquí puedes acceder a todas las secciones principales de tu aplicación. Selecciona una opción en la barra de navegación para comenzar.</p>
-    </section>
+    </app-card>
 
-    <section *ngIf="active() === 'inicio'" class="card">
+    <app-card *ngIf="active() === 'inicio'">
       <h2>🚀 Características Principales</h2>
       <p>Explora nuestras funcionalidades: gestiona tu inventario, actualiza tu perfil, contacta con soporte y más. Todo en un solo lugar para tu comodidad.</p>
-    </section>
+    </app-card>
 
-    <!-- INVENTARIO: 2 cards -->
-    <section *ngIf="active() === 'inventario'" class="card">
+    <app-card *ngIf="active() === 'inventario'">
       <h2>📦 Gestión de Productos</h2>
       <p>Vista de inventario: aquí puedes listar todos los productos disponibles, verificar stock en tiempo real y gestionar nuevas entradas de mercancía.</p>
-    </section>
+    </app-card>
 
-    <section *ngIf="active() === 'inventario'" class="card">
+    <app-card *ngIf="active() === 'inventario'">
       <h2>📈 Estadísticas de Stock</h2>
       <p>Monitorea el estado de tu inventario con gráficos detallados. Recibe alertas de productos agotados y optimiza tus niveles de stock.</p>
-    </section>
+    </app-card>
 
-    <!-- CONTACTO: 2 cards -->
-    <section *ngIf="active() === 'contacto'" class="card">
+    <app-card *ngIf="active() === 'contacto'">
       <h2>📞 Información de Contacto</h2>
       <p>Ponte en contacto con nuestro equipo de soporte. Disponemos de múltiples canales: teléfono, correo electrónico y formulario de contacto directo.</p>
-    </section>
+    </app-card>
 
-    <section *ngIf="active() === 'contacto'" class="card">
+    <app-card *ngIf="active() === 'contacto'">
       <h2>💬 Formulario de Solicitud</h2>
       <p>Envía tus consultas, sugerencias o reporta problemas a través de nuestro formulario. Nos comprometemos a responder en menos de 24 horas.</p>
-    </section>
+    </app-card>
 
-    <!-- MI PERFIL: 2 cards -->
-    <section *ngIf="active() === 'perfil'" class="card">
+    <app-card *ngIf="active() === 'perfil'">
       <h2>👤 Datos Personales</h2>
       <p>Visualiza y edita tu información de usuario: nombre, correo electrónico, teléfono y otros datos personales asociados a tu cuenta.</p>
-    </section>
+    </app-card>
 
-    <section *ngIf="active() === 'perfil'" class="card">
+    <app-card *ngIf="active() === 'perfil'">
       <h2>⚙️ Ajustes y Preferencias</h2>
       <p>Personaliza tu experiencia: configura notificaciones, cambia tu contraseña, selecciona tu idioma preferido y otras opciones de seguridad.</p>
-    </section>
+    </app-card>
   </div>
 </main>
-
-<router-outlet></router-outlet>

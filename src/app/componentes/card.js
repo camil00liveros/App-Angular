@@ -10,13 +10,14 @@ class AppCard extends HTMLElement {
 
   
   async connectedCallback() {
-    const width = this.getAttribute('width') || '120px';
-    const height = this.getAttribute('height') || '80px';
+    // only apply explicit sizing if the attributes are provided — otherwise allow content to size the card
+    const widthAttr = this.getAttribute('width');
+    const heightAttr = this.getAttribute('height');
 
     const wrapper = document.createElement('div');
     wrapper.className = 'card';
-    wrapper.style.width = width;
-    wrapper.style.height = height;
+    if (widthAttr) wrapper.style.width = widthAttr;
+    if (heightAttr) wrapper.style.height = heightAttr;
     wrapper.innerHTML = `<slot></slot>`;
 
     // try to load external CSS served from /componentes/card.css
@@ -32,7 +33,7 @@ class AppCard extends HTMLElement {
       }
     } catch (e) {
       const style = document.createElement('style');
-      style.textContent = `.card{width:${width};height:${height};background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;}`;
+      style.textContent = `.card{background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);display:block;padding:1rem;box-sizing:border-box;}`;
       this.shadowRoot.appendChild(style);
     }
 

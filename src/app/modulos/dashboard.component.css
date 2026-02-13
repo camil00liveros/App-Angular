@@ -1,0 +1,37 @@
+:host{
+  --bg: #f6f7fb;
+  --primary: #5b21b6;
+  --muted: #6b7280;
+  display:block;
+  box-sizing: border-box;
+}
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  gap: 1rem;
+}
+.brand h1 { margin: 0; font-size: 1.125rem; color: var(--primary); }
+.nav-buttons { display: flex; gap: 0.5rem; }
+.nav-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #111827;
+  font-weight: 600;
+}
+.nav-button.active {
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  color: var(--primary);
+}
+.dashboard { background: var(--bg); min-height: calc(100vh - 68px); padding: 2rem 1.5rem; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card, app-card { background: white; border-radius: 10px; padding: 1rem; box-shadow: 0 6px 18px rgba(12,15,20,0.04); display:block; }
+.card h2 { margin: 0 0 0.5rem 0; }
+@media (max-width:600px){ nav.navbar{flex-direction:column;align-items:stretch;} .nav-buttons{justify-content:space-around;width:100%;} }
