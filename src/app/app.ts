@@ -6,7 +6,7 @@ import { DashboardComponent } from './modulos/dashboard.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgIf, CardComponent, DashboardComponent],
+  imports: [RouterOutlet, CardComponent, DashboardComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.html',
   styleUrl: './app.css'

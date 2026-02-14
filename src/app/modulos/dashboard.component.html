@@ -12,14 +12,26 @@
 
 <main class="dashboard">
   <div class="grid">
+
     <app-card *ngIf="active() === 'inicio'">
       <h2>📊 Panel de Control</h2>
       <p>Bienvenido al panel de control. Desde aquí puedes acceder a todas las secciones principales de tu aplicación. Selecciona una opción en la barra de navegación para comenzar.</p>
     </app-card>
-
-    <app-card *ngIf="active() === 'perfil'">
+    
+     <app-card *ngIf="active() === 'inventario'">
       <h2>⚙️ Ajustes y Preferencias</h2>
       <p>Personaliza tu experiencia: configura notificaciones, cambia tu contraseña, selecciona tu idioma preferido y otras opciones de seguridad.</p>
     </app-card>
-  </div>
+
+    <app-card *ngIf="active() === 'contacto'">
+      <h2>⚙️ Ajustes y Preferencias</h2>
+      <p>Personaliza tu experiencia: configura notificaciones, cambia tu contraseña, selecciona tu idioma preferido y otras opciones de seguridad.</p>
+    </app-card>
+  
+     <app-card *ngIf="active() === 'perfil'">
+      <h2>⚙️ Ajustes y Preferencias</h2>
+      <p>Personaliza tu experiencia: configura notificaciones, cambia tu contraseña, selecciona tu idioma preferido y otras opciones de seguridad.</p>
+    </app-card>
+  
+    </div>
 </main>
