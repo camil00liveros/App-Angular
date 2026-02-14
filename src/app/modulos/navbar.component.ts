@@ -7,6 +7,9 @@ import { NgIf } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
+
+
+
 export class NavbarComponent {
   protected readonly active = signal('inicio');
   protected setActive(view: string) { this.active.set(view); }
