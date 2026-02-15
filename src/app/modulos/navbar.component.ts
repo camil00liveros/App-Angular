@@ -10,6 +10,8 @@ import { NgIf } from '@angular/common';
 
 
 
+
+
 export class NavbarComponent {
   protected readonly active = signal('inicio');
   protected setActive(view: string) { this.active.set(view); }
