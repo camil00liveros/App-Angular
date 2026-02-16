@@ -1,12 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { CardComponent } from '../componentes/card.component';
-import { NavbarComponent } from '../modulos/navbar.component';
+
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgIf, CardComponent, NavbarComponent],
+  imports: [NgIf],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
