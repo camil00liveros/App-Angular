@@ -64,11 +64,19 @@
     <section *ngIf="active() === 'inicio'" class="card">
       <h2>Inicio</h2>
       <p>Bienvenido al panel de control. Selecciona una sección en la barra de navegación.</p>
+
+
+  
     </section>
 
     <section *ngIf="active() === 'inventario'" class="card">
       <h2>Inventario</h2>
       <p>Vista de inventario: aquí puedes listar productos, stock y gestionar entradas.</p>
+    </section>
+
+      <section *ngIf="active() === 'inventario'" class="card">
+      <h2>Inventario</h2>
+      <p>Un cambio, una nueva section</p>
     </section>
 
     <section *ngIf="active() === 'contacto'" class="card">
