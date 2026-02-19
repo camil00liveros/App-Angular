@@ -43,6 +43,10 @@
   @media (max-width:600px){ nav.navbar{flex-direction:column;align-items:stretch;} .nav-buttons{justify-content:space-around;width:100%;} }
 </style>
 
+
+
+
+
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="brand">
     <h1>Mi Dashboard</h1>
@@ -54,9 +58,6 @@
     <button class="nav-button" role="tab" (click)="setActive('perfil')" [class.active]="active() === 'perfil'">Mi perfil</button>
   </div>
 </nav>
-
-
-
 
 <main class="dashboard">
   <div class="grid">
