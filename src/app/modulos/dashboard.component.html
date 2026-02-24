@@ -42,7 +42,7 @@
   .card h2 { margin: 0 0 0.5rem 0; }
   @media (max-width:600px){ nav.navbar{flex-direction:column;align-items:stretch;} .nav-buttons{justify-content:space-around;width:100%;} }
 </style>
-
+*
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="brand">
     <h1>Mi Dashboard</h1>
@@ -54,7 +54,7 @@
     <button class="nav-button" role="tab" (click)="setActive('perfil')" [class.active]="active() === 'perfil'">Mi perfil</button>
   </div>
 </nav>
-
+<!-- Html cuerpo del dashboard -->
 <main class="dashboard">
   <div class="grid">
     <section *ngIf="active() === 'inicio'" class="card">
