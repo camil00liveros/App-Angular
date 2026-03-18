@@ -8,4 +8,4 @@ import { Component } from '@angular/core';
     `:host{display:block;box-sizing:border-box;}`
   ]
 })
-export class CardComponent {}
+export class CardComponent { }
